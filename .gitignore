@@ -1,1 +1,8 @@
+# JavaScript dependencies
 node_modules
+
+# PureScript dependencies
+.spago
+
+# PureScript output
+output 
