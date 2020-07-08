@@ -1,0 +1,9 @@
+{
+  "name": "ry-starter-spa",
+  "version": "1.0.0",
+  "description": "A starter template for building a single-page-application with PureScript and React.",
+  "main": "index.js",
+  "repository": "git@github.com:rowtype-yoga/ry-starter-spa.git",
+  "author": "Mark Eibes <mark.eibes@gmail.com>",
+  "license": "MIT"
+}
