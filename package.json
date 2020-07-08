@@ -5,5 +5,9 @@
   "main": "index.js",
   "repository": "git@github.com:rowtype-yoga/ry-starter-spa.git",
   "author": "Mark Eibes <mark.eibes@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "purescript": "^0.13.8",
+    "spago": "^0.15.3"
+  }
 }
