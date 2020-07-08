@@ -5,4 +5,10 @@ node_modules
 .spago
 
 # PureScript output
-output 
+output
+
+# Webpack output
+dist
+
+# PureScript tooling
+.psc-ide-port
