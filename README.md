@@ -8,4 +8,4 @@ yarn webpack
 ```
 
 # 👟 Running
-To run the bundle simply open the file `./dist/index.html` in your favourite browser.
+To run the bundle open the file `./dist/index.html` in your favourite browser.
