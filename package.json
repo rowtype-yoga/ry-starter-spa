@@ -7,6 +7,7 @@
   "author": "Mark Eibes <mark.eibes@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
     "html-webpack-plugin": "^4.3.0",
     "purescript": "^0.13.8",
     "spago": "^0.15.3",
