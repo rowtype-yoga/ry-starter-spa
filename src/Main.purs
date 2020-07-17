@@ -1,22 +1,20 @@
 module Main where
 
-import Prelude
+import Prelude.Default
 
-import Data.Maybe (Maybe(..))
-import Effect (Effect)
+import Components.Example as Example
 import Effect.Exception (throw)
 import React.Basic (JSX)
 import React.Basic.DOM (render)
-import React.Basic.DOM as R
 import Web.DOM (Element)
 import Web.DOM.NonElementParentNode (getElementById)
 import Web.HTML (window)
 import Web.HTML.HTMLDocument (toNonElementParentNode)
 import Web.HTML.Window (document)
 
--- | The main JSX/React Component for this single-page-application.
-app :: JSX
-app = R.text "Hello, PureScript!"
+-- | Constructs the main React Component for this single-page-application.
+mkApp :: Effect JSX
+mkApp = Example.component <#> (_ $ 0)
 
 -- | The id of the HTML element which will wrap the React App.
 -- | It needs to match your `index.html` file, for example:
@@ -31,6 +29,7 @@ containerId = "container"
 main :: Effect Unit
 main = do
   container <- getContainerById containerId
+  app <- mkApp
   render app container
 
 -- | Finds an Element based on its ID in
