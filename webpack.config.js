@@ -2,7 +2,8 @@
 
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 
 module.exports = {
   mode: "development",
@@ -21,12 +22,16 @@ module.exports = {
       title: "PureScript Starter",
       template: path.resolve(__dirname, "src", "index.html"),
     }),
+    // This plugin updates React components without losing their state
+    new ReactRefreshWebpackPlugin(),
   ],
 
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
     port: 9000,
+    hotOnly: true,
+    hot: true,
   },
 
 
