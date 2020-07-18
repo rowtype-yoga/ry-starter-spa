@@ -121,8 +121,32 @@ let additions =
 let upstream =
       https://github.com/purescript/package-sets/releases/download/psc-0.13.8/packages.dhall sha256:0e95ec11604dc8afc1b129c4d405dcc17290ce56d7d0665a0ff15617e32bbf03
 
-let overrides = {=}
+let overrides =
+  { spec-discovery =
+      upstream.spec-discovery // { version = "master" }
+  }
 
-let additions = {=}
+let additions =
+      { react-testing-library =
+          { dependencies =
+            [ "aff-promise"
+            , "console"
+            , "debug"
+            , "effect"
+            , "foreign"
+            , "foreign-object"
+            , "psci-support"
+            , "react-basic-hooks"
+            , "remotedata"
+            , "run"
+            , "simple-json"
+            , "spec"
+            , "spec-discovery"
+            ]
+          , repo =
+              "https://github.com/i-am-the-slime/purescript-react-testing-library.git"
+          , version = "master"
+          }
+      }
 
-in  upstream // overrides // additions
+in  upstream ⫽ overrides ⫽ additions
