@@ -1,5 +1,7 @@
 # `( 🧘🏿‍♀️ ⸬ 🧘🏽‍♂️ | 🧘🏻 )` Single-Page-Application Starter
 
+![Ubuntu](https://github.com/rowtype-yoga/ry-starter-spa/workflows/Node.js%20CI/badge.svg)
+
 # 🖥 Developing
 To see the project in your browser run:
 
