@@ -7,6 +7,13 @@ To see the project in your browser run:
 yarn start:dev
 ```
 
+# 🧪 Testing
+To run the tests issue this command
+
+```sh
+yarn test
+```
+
 # 🛠 Building
 To create a bundle that is essentially an `index.html` and an `index.js` file run the following command:
 

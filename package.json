@@ -23,7 +23,8 @@
   },
   "scripts": {
     "start:dev": "webpack-dev-server --open",
-    "webpack": "webpack --config webpack.config.js"
+    "webpack": "webpack --config webpack.config.js",
+    "test": "spago test"
   },
   "dependencies": {
     "react": "^16.13.1",
