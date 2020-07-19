@@ -3,14 +3,8 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 
 module.exports = {
-  mode: "development",
-
-  // The JavaScript file to be injected into the HTML file
-  entry: path.resolve(__dirname, "index.js"),
-
   plugins: [
     // This plugin deletes (cleans) the output folder
     // `./dist` in our case
@@ -22,21 +16,5 @@ module.exports = {
       title: "PureScript Starter",
       template: path.resolve(__dirname, "src", "index.html"),
     }),
-    // This plugin updates React components without losing their state
-    new ReactRefreshWebpackPlugin(),
   ],
-
-  devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-    compress: true,
-    port: 9000,
-    hotOnly: true,
-    hot: true,
-  },
-
-
-  output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "bundle.js",
-  },
 };

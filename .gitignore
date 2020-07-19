@@ -7,8 +7,11 @@ node_modules
 # PureScript output
 output
 
-# Webpack output
+# Webpack prod output
 dist
 
 # PureScript tooling
 .psc-ide-port
+
+# Dead Code Eliminated (zephyr) output
+dce-output
