@@ -11,10 +11,19 @@ on:
     
 jobs:
   build:
-    name: Test
+    name: Test and Bundle
     runs-on: ubuntu-20.04
     steps:
+
+      # Install Zephyr manually
+      - run: curl -Ls https://github.com/coot/zephyr/releases/download/v0.3.2/Linux.tar.gz | tar -xvz -C /tmp
+      - run: sudo cp /tmp/zephyr/zephyr /usr/local/bin/
+
+      # Install yarn
       - run: sudo npm install -g yarn
+
+      # Run actual tasks
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn test
+      - run: yarn bundle

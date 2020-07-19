@@ -16,15 +16,22 @@
     "jsdom-global": "^3.0.2",
     "purescript": "^0.13.8",
     "react-refresh": "^0.8.3",
+    "rimraf": "^3.0.2",
     "spago": "^0.15.3",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.0.9"
   },
   "scripts": {
-    "start:dev": "webpack-dev-server --open",
-    "webpack": "webpack --config webpack.config.js",
-    "test": "spago test"
+    "clean": "rimraf node_modules output dce-output .spago dist/* *.lock dist",
+    "postinstall": "spago install",
+    "test": "spago test",
+    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "bundle:build": "spago build --purs-args '--codegen corefn'",
+    "bundle:dce": "zephyr -f Main.main",
+    "bundle:parcel": "webpack --config webpack.prod.js",
+    "bundle": "npm run bundle:build && npm run bundle:dce && npm run bundle:parcel"
   },
   "dependencies": {
     "react": "^16.13.1",
