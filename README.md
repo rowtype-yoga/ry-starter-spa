@@ -1,6 +1,6 @@
-# `( 🧘🏿‍♀️ ⸬ 🧘🏽‍♂️ | 🧘🏻 )` Single-Page-Application Starter
+![Continuous Integration](https://github.com/rowtype-yoga/ry-starter-spa/workflows/Continuous%20Integration/badge.svg)
 
-![Ubuntu](https://github.com/rowtype-yoga/ry-starter-spa/workflows/Node.js%20CI/badge.svg)
+# `( 🧘🏿‍♀️ ⸬ 🧘🏽‍♂️ | 🧘🏻 )` Single-Page-Application Starter
 
 # 🖥 Developing
 To see the project in your browser run:
