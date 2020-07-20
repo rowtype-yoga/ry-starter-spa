@@ -27,6 +27,7 @@
     "clean": "rimraf node_modules output dce-output .spago dist/* *.lock dist",
     "postinstall": "spago install",
     "test": "spago test",
+    "prestart": "spago build",
     "start": "webpack-dev-server --open --config webpack.dev.js",
     "bundle:build": "spago build --purs-args '--codegen corefn'",
     "bundle:dce": "zephyr -f Main.main",
