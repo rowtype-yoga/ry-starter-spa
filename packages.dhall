@@ -122,9 +122,7 @@ let upstream =
       https://github.com/purescript/package-sets/releases/download/psc-0.13.8/packages.dhall sha256:0e95ec11604dc8afc1b129c4d405dcc17290ce56d7d0665a0ff15617e32bbf03
 
 let overrides =
-  { spec-discovery =
-      upstream.spec-discovery // { version = "master" }
-  }
+      { spec-discovery = upstream.spec-discovery ⫽ { version = "master" } }
 
 let additions =
       { react-testing-library =
@@ -146,6 +144,20 @@ let additions =
           , repo =
               "https://github.com/i-am-the-slime/purescript-react-testing-library.git"
           , version = "master"
+          }
+      , react-basic-emotion =
+          { dependencies =
+            [ "colors"
+            , "foreign"
+            , "numbers"
+            , "prelude"
+            , "react-basic"
+            , "typelevel-prelude"
+            , "unsafe-reference"
+            ]
+          , repo =
+              "https://github.com/lumihq/purescript-react-basic-emotion.git"
+          , version = "main"
           }
       }
 
