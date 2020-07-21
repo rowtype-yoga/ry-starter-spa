@@ -7,6 +7,7 @@ You can edit this file as you like.
   [ "console"
   , "effect"
   , "psci-support"
+  , "react-basic-emotion"
   , "react-basic-hooks"
   , "react-testing-library"
   , "spec-discovery"

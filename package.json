@@ -35,6 +35,7 @@
     "bundle": "npm run bundle:build && npm run bundle:dce && npm run bundle:parcel"
   },
   "dependencies": {
+    "@emotion/core": "^10.0.28",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   }
