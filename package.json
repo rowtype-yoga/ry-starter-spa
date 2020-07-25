@@ -26,6 +26,7 @@
   "scripts": {
     "clean": "rimraf node_modules output dce-output .spago dist/* *.lock dist",
     "postinstall": "spago install",
+    "pretest": "spago build",
     "test": "spago test",
     "prestart": "spago build",
     "start": "webpack-dev-server --open --config webpack.dev.js",
