@@ -1,10 +1,12 @@
 module Components.LoadingAnimation.View where
 
 import Prelude.View
+
 import Assets.Leaf as Leaf
 import Assets.Petal as Petal
 import Components.LoadingAnimation.Style as Style
 import Data.Array ((..))
+import Data.Int as Int
 import React.Basic.DOM (css)
 import React.Basic.DOM as R
 import React.Basic.Emotion as E
@@ -38,13 +40,13 @@ component =
           }
 
 leafCircle ∷ JSX
-leafCircle = fragment $ (0 .. 7) # map rotatedLeaf
+leafCircle = fragment $ ((0 .. 3) # map (rotatedLeaf 0)) <> ((0 .. 3) # map (rotatedLeaf 45))
   where
-  rotatedLeaf i =
+  rotatedLeaf offset i =
     leaf
       { style:
         css
-          { transform: "rotate(" <> show (i * 45) <> "deg)"
+          { transform: "scale("<> show scale <>", 1.0) rotate(" <> show (i * 87 + offset) <> "deg)"
           , position: "absolute"
           }
       , width: "100%"
@@ -52,3 +54,5 @@ leafCircle = fragment $ (0 .. 7) # map rotatedLeaf
       }
     where
     leaf = Leaf.leaf
+    scale = 1.0 - (((Int.toNumber offset) - 45.0)/450.0 * 0.3)
+    

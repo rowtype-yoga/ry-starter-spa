@@ -9,7 +9,7 @@ global =
     { "html, body":
       E.nested
         $ E.css
-            { background: E.str "#223"
+            { background: E.str "linear-gradient(to bottom right, #10354a, #002334)"
             }
     , "h1":
       E.nested
