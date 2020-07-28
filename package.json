@@ -18,7 +18,7 @@
     "react-refresh": "^0.8.3",
     "rimraf": "^3.0.2",
     "spago": "^0.15.3",
-    "svg2psreact": "i-am-the-slime/svg2psreact",
+    "svg2psreact": "^2.1.0",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
