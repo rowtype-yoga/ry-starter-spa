@@ -4854,6 +4854,10 @@ supports-color@^7.1.0:
   dependencies:
     has-flag "^4.0.0"
 
+svg2psreact@i-am-the-slime/svg2psreact:
+  version "2.1.0"
+  resolved "https://codeload.github.com/i-am-the-slime/svg2psreact/tar.gz/17483f337c7dd41828baeebad0bdb3dea2f22b88"
+
 symbol-tree@^3.2.4:
   version "3.2.4"
   resolved "https://registry.yarnpkg.com/symbol-tree/-/symbol-tree-3.2.4.tgz#430637d248ba77e078883951fb9aa0eed7c63fa2"
