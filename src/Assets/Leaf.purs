@@ -3,7 +3,7 @@ module Assets.Leaf where
 import Prim.Row (class Union)
 import React.Basic (JSX)
 import React.Basic.DOM as R
-import React.Basic.DOM.Internal (CSS, SharedSVGProps)
+import React.Basic.DOM.Internal (SharedSVGProps)
 import React.Basic.DOM.SVG (Props_svg)
 import React.Basic.DOM.SVG as SVG
 import Record as Record
