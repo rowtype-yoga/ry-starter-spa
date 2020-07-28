@@ -15,3 +15,8 @@ dist
 
 # Dead Code Eliminated (zephyr) output
 dce-output
+
+## Miscellaneous
+
+# macOS trash
+.DS_Store

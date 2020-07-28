@@ -156,8 +156,8 @@ let additions =
             , "unsafe-reference"
             ]
           , repo =
-              "https://github.com/lumihq/purescript-react-basic-emotion.git"
-          , version = "main"
+              "https://github.com/i-am-the-slime/purescript-react-basic-emotion.git"
+          , version = "add-keyframes"
           }
       }
 

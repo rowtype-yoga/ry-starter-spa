@@ -2,7 +2,7 @@ module Main where
 
 import Prelude.Default
 
-import Components.Example as Example
+import Components.Container as Container
 import Effect.Exception (throw)
 import React.Basic (JSX, element)
 import React.Basic.DOM (render)
@@ -15,7 +15,7 @@ import Web.HTML.Window (document)
 -- | Constructs the main React Component for this single-page-application.
 mkApp :: Effect JSX
 mkApp = do
-  pure $ element Example.component { initialValue: 0 }
+  pure $ element Container.component {}
 
 -- | The id of the HTML element which will wrap the React App.
 -- | It needs to match your `index.html` file, for example:
