@@ -12,6 +12,18 @@ Any real adventurer prepares their trip. For this trip you need to equip your co
    ```
 
 # 🖥 Developing
+We recommend using Storybook during development but you can also locally start the application.
+
+## 📗 Using Storybook
+A very nice workflow for building frontends is to use [Storybook](https://storybook.js.org/). You write stories for your components and immediately see them in action. This frees you from having to click through your UI to finally find your component. It also frees you from having to simulate error states; you just write a story for that.
+
+To run storybook run:
+
+```sh
+yarn storybook
+```
+
+## 🏃🏽‍♀️ Running the whole application
 To see the project in your browser run:
 
 ```sh
