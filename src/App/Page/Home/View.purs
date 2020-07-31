@@ -1,9 +1,9 @@
-module Components.Home.View (component) where
+module App.Components.Home.View (component) where
 
-import Prelude.View
+import App.Prelude.View
 
-import Components.Home.Style as Styles
-import Components.LoadingAnimation as LoadingAnimation
+import App.Components.Home.Style as Styles
+import App.Components.LoadingAnimation as LoadingAnimation
 import React.Basic.DOM as R
 import React.Basic.Emotion as E
 

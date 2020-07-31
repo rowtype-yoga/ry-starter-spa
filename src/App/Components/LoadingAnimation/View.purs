@@ -1,10 +1,10 @@
-module Components.LoadingAnimation.View where
+module App.Components.LoadingAnimation.View where
 
-import Prelude.View
+import App.Prelude.View
 
-import Assets.Leaf as Leaf
-import Assets.Petal as Petal
-import Components.LoadingAnimation.Style as Style
+import App.Assets.Leaf as Leaf
+import App.Assets.Petal as Petal
+import App.Components.LoadingAnimation.Style as Style
 import Data.Array ((..))
 import Data.Int as Int
 import React.Basic.DOM (css)

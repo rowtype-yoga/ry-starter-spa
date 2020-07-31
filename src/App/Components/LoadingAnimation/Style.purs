@@ -1,4 +1,4 @@
-module Components.LoadingAnimation.Style (viewbox, petalsContainer, container) where
+module App.Components.LoadingAnimation.Style (viewbox, petalsContainer, container) where
 
 import Prelude
 import React.Basic.Emotion as E

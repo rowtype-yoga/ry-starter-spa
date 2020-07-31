@@ -1,4 +1,4 @@
-module Assets.Petal where
+module App.Assets.Petal where
 
 import Prim.Row (class Union)
 import React.Basic (JSX)

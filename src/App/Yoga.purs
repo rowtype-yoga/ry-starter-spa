@@ -1,4 +1,4 @@
-module Yoga where
+module App.Yoga where
 
 import Prelude
 import Effect.Unsafe (unsafePerformEffect)

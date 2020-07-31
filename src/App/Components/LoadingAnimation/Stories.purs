@@ -1,7 +1,7 @@
-module Components.LoadingAnimation.Stories where
+module App.Components.LoadingAnimation.Stories where
 
 import Prelude
-import Components.LoadingAnimation as LoadingAnimation
+import App.Components.LoadingAnimation as LoadingAnimation
 import Effect (Effect)
 import React.Basic (JSX, element)
 
