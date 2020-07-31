@@ -1,8 +1,11 @@
 module Page.Routes where
 
 import Prelude hiding ((/))
+
+import Data.Either (hush)
 import Data.Generic.Rep (class Generic)
-import Routing.Duplex (RouteDuplex', root)
+import Data.Maybe (fromMaybe)
+import Routing.Duplex (RouteDuplex', parse, root)
 import Routing.Duplex.Generic (noArgs, sum)
 import Routing.Duplex.Generic.Syntax ((/))
 
@@ -19,6 +22,9 @@ routeCodec =
         , "NotFound": "404" / noArgs
         , "Docs": "docs" / noArgs
         }
+
+parseOrNotFound :: String -> Route
+parseOrNotFound str = parse routeCodec str # hush # fromMaybe NotFound
 
 -- Instances so we can use route in this way
 derive instance genericRoute ∷ Generic Route _
