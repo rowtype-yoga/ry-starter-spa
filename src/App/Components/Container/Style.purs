@@ -1,4 +1,4 @@
-module Components.Container.Style where
+module App.Components.Container.Style where
 
 import Prelude
 import React.Basic.Emotion as E

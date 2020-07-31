@@ -1,5 +1,5 @@
-module Prelude.Spec
-  ( module Prelude.Default
+module App.Prelude.Spec
+  ( module App.Prelude.Default
   , module Effect.Aff
   , module React.TestingLibrary
   , module Test.Spec
@@ -7,7 +7,7 @@ module Prelude.Spec
   , module React.Basic
   ) where
 
-import Prelude.Default
+import App.Prelude.Default
 
 import Effect.Aff (Aff)
 import React.Basic (ReactComponent)

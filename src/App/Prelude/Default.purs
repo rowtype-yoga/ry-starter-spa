@@ -1,4 +1,4 @@
-module Prelude.Default
+module App.Prelude.Default
   ( module Prelude
   , module Data.Maybe
   , module Data.Either

@@ -1,7 +1,7 @@
-module Components.Home.Spec where
+module App.Components.Home.Spec where
 
-import Prelude.Spec
-import Components.Home as Home
+import App.Prelude.Spec
+import App.Components.Home as Home
 
 spec ∷ Spec Unit
 spec =

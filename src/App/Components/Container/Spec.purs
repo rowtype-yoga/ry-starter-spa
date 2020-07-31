@@ -1,7 +1,7 @@
-module Components.Container.Spec where
+module App.Components.Container.Spec where
 
-import Prelude.Spec
-import Components.Container as Container
+import App.Prelude.Spec
+import App.Components.Container as Container
 import React.Basic.DOM as R
 import React.Basic.Hooks (reactChildrenFromArray)
 

@@ -1,8 +1,8 @@
-module Components.Home.Stories where
+module App.Components.Home.Stories where
 
 import Prelude
 
-import Components.Home as Home
+import App.Components.Home as Home
 import Effect (Effect)
 import React.Basic (JSX, element)
 

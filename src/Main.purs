@@ -1,8 +1,8 @@
 module Main where
 
-import Prelude.Default
+import App.Prelude.Default
 
-import Components.Router.Component as Router
+import App.Components.Router.Component as Router
 import Effect.Exception (throw)
 import React.Basic (JSX, element)
 import React.Basic.DOM (render)

@@ -1,9 +1,9 @@
-module Components.Router.Component where
+module App.Components.Router.Component where
 
-import Prelude.View
+import App.Prelude.View
 
-import Components.Container as Container
-import Components.Home as Home
+import App.Components.Container as Container
+import App.Components.Home as Home
 import Data.Foldable (for_)
 import Data.Nullable as Nullable
 import Foreign (unsafeToForeign)

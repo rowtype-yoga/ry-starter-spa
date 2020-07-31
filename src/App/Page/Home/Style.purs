@@ -1,4 +1,4 @@
-module Components.Home.Style where
+module App.Components.Home.Style where
 
 import React.Basic.Emotion as E
 

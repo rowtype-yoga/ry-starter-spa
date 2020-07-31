@@ -1,7 +1,7 @@
-module Components.Container.Stories where
+module App.Components.Container.Stories where
 
 import Prelude
-import Components.Container as Container
+import App.Components.Container as Container
 import Effect (Effect)
 import React.Basic (JSX, element)
 import React.Basic.DOM as R

@@ -1,7 +1,7 @@
-module Components.Container.View (component) where
+module App.Components.Container.View (component) where
 
-import Prelude.View
-import Components.Container.Style as Styles
+import App.Prelude.View
+import App.Components.Container.Style as Styles
 import Data.Array as Array
 import React.Basic.Emotion as E
 
