@@ -4,4 +4,4 @@ if (module.hot) {
   module.hot.accept();
 }
 
-Main.main()
+Main.main({ serverSideRendering: false})()
