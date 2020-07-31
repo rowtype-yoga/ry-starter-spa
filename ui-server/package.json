@@ -1,0 +1,24 @@
+{
+  "name": "ui-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Mark Eibes",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@emotion/cache": "^10.0.29",
+    "@emotion/core": "^10.0.28",
+    "create-emotion-server": "^10.0.27",
+    "express": "^4.17.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "scripts": {
+    "build": "spago build",
+    "start": "node index.js"
+  },
+  "devDependencies": {
+    "purescript": "^0.13.8",
+    "spago": "^0.15.3"
+  }
+}
