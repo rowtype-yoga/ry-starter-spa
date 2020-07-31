@@ -10,36 +10,19 @@ global =
       E.nested
         $ E.css
             { background: E.str "linear-gradient(to bottom right, #10354a, #002334)"
+            , minHeight: E.vh 100.0
+            , minWidth: E.vw 100.0
             }
     , "h1":
       E.nested
         $ E.css
             { fontSize: E.em 3.5
-            , fontWeight: E.str "normal"
+            , fontWeight: E.str "black"
             }
     , "*":
       E.nested
         $ E.css
-            { fontFamily: E.str "'Victor Mono', sans-serif"
+            { fontFamily: E.str "system-ui, sans-serif"
             , color: E.str "#f7f7f0"
             }
-    }
-
-center ∷ E.Style
-center =
-  E.css
-    { display: E.str "grid"
-    , justifyContent: E.str "center"
-    , alignItems: E.str "center"
-    , width: E.str "100vw"
-    , height: E.str "100vh"
-    }
-
-content ∷ E.Style
-content =
-  E.css
-    { display: E.str "flex"
-    , flexDirection: E.str "column"
-    , justifyContent: E.str "center"
-    , alignItems: E.str "center"
     }

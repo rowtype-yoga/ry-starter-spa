@@ -2,10 +2,11 @@ module Main where
 
 import Prelude.Default
 
-import Components.Container as Container
+import Components.Router.Component as Router
 import Effect.Exception (throw)
 import React.Basic (JSX, element)
 import React.Basic.DOM (render)
+import Routing.PushState as PushState
 import Web.DOM (Element)
 import Web.DOM.NonElementParentNode (getElementById)
 import Web.HTML (window)
@@ -15,7 +16,8 @@ import Web.HTML.Window (document)
 -- | Constructs the main React Component for this single-page-application.
 mkApp :: Effect JSX
 mkApp = do
-  pure $ element Container.component {}
+  nav <- PushState.makeInterface
+  pure $ element Router.component { nav }
 
 -- | The id of the HTML element which will wrap the React App.
 -- | It needs to match your `index.html` file, for example:
