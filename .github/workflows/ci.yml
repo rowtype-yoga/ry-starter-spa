@@ -31,11 +31,11 @@ jobs:
       - run: yarn bundle
 
      ## UI Server
-      - run: pushd ui-server
+      - run: cd ui-server
       - run: yarn install
       - run: yarn build
       # [TODO] - run: yarn test
-      - run: popd
+      - run: cd ..
 
     ## Build docker image
     ## The Dockerfile requires the two previous steps
