@@ -1,4 +1,6 @@
 ![Continuous Integration](https://github.com/rowtype-yoga/ry-starter-spa/workflows/Continuous%20Integration/badge.svg)
+[![Discord Chat](https://img.shields.io/discord/308323056592486420.svg)](https://discord.gg/JbmPT8F)  
+
 
 # `( 🧘🏿‍♀️ ⸬ 🧘🏽‍♂️ | 🧘🏻 )` Single-Page-Application Starter
 
