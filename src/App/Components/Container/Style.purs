@@ -6,23 +6,30 @@ import React.Basic.Emotion as E
 global ∷ E.Style
 global =
   E.css
-    { "html, body":
+    { html:
       E.nested
         $ E.css
-            { background: E.str "linear-gradient(to bottom right, #10354a, #002334)"
-            , minHeight: E.vh 100.0
-            , minWidth: E.vw 100.0
+            { boxSizing: E.str "border-box"
             }
-    , "h1":
+    , body:
+      E.nested
+        $ E.css
+            { minHeight: E.vh 100.0
+            , minWidth: E.vw 100.0
+            , fontFamily: E.str "system-ui, sans-serif"
+            , color: E.str "#f7f7f0"
+            , background: E.str "linear-gradient(to bottom right, #10354a, #002334)"
+            , margin: E.str "0"
+            }
+    , h1:
       E.nested
         $ E.css
             { fontSize: E.em 3.5
             , fontWeight: E.str "black"
             }
-    , "*":
+    , "*, *:before, *:after":
       E.nested
         $ E.css
-            { fontFamily: E.str "system-ui, sans-serif"
-            , color: E.str "#f7f7f0"
+            { boxSizing: E.str "inherit"
             }
     }
