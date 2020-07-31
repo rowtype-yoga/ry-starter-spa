@@ -10,6 +10,8 @@ You can edit this file as you like.
   , "react-basic-emotion"
   , "react-basic-hooks"
   , "react-testing-library"
+  , "routing"
+  , "routing-duplex"
   , "spec-discovery"
   ]
 , packages = ./packages.dhall
