@@ -24,7 +24,19 @@ jobs:
 
       # Run actual tasks
       - uses: actions/checkout@v2
+      ## Frontend
       - run: yarn install
       - run: yarn test
       - run: yarn build-storybook
       - run: yarn bundle
+
+     ## UI Server
+      - run: pushd ui-server
+      - run: yarn install
+      - run: yarn build
+      # [TODO] - run: yarn test
+      - run: popd
+
+    ## Build docker image
+    ## The Dockerfile requires the two previous steps
+      - run: docker build . 
