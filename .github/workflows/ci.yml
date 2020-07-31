@@ -15,12 +15,13 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
 
-      # Install Zephyr manually
-      - run: curl -Ls https://github.com/coot/zephyr/releases/download/v0.3.2/Linux.tar.gz | tar -xvz -C /tmp
-      - run: sudo cp /tmp/zephyr/zephyr /usr/local/bin/
+      - name: Download Zephyr release
+        run: curl -Ls https://github.com/coot/zephyr/releases/download/v0.3.2/Linux.tar.gz | tar -xvz -C /tmp
+      - name: Copy Zephyr to PATH
+        run: sudo cp /tmp/zephyr/zephyr /usr/local/bin/
 
-      # Install yarn
-      - run: sudo npm install -g yarn
+      - name: Install yarn
+        run: sudo npm install -g yarn
 
       # Run actual tasks
       - uses: actions/checkout@v2
@@ -45,4 +46,5 @@ jobs:
     ## Build docker image
     ## The Dockerfile requires the two previous steps
       - name: Build Docker image
+        working-directory: .
         run: docker build . 
