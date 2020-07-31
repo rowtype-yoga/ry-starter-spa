@@ -25,18 +25,24 @@ jobs:
       # Run actual tasks
       - uses: actions/checkout@v2
       ## Frontend
-      - run: yarn install
-      - run: yarn test
-      - run: yarn build-storybook
-      - run: yarn bundle
+      - name: Install Frontend Dependencies
+        run: yarn install
+      - name: Test Frontend
+        run: yarn test
+      - name: Build Storybook
+        run: yarn build-storybook
+      - name: Bundle Frontend
+        run: yarn bundle
 
      ## UI Server
-      - run: cd ui-server
-      - run: yarn install
-      - run: yarn build
-      # [TODO] - run: yarn test
-      - run: cd ..
+      - name: Install UI Server Dependencies
+        working-directory: ui-server
+        run: yarn install
+      - name: Build UI Server
+        working-directory: ui-server
+        run: yarn install
 
     ## Build docker image
     ## The Dockerfile requires the two previous steps
-      - run: docker build . 
+      - name: Build Docker image
+        run: docker build . 
