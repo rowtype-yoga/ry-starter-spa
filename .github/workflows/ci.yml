@@ -11,20 +11,39 @@ on:
     
 jobs:
   build:
-    name: Test and Bundle
+    name: Test, Bundle, and Dockerise
     runs-on: ubuntu-20.04
     steps:
 
-      # Install Zephyr manually
-      - run: curl -Ls https://github.com/coot/zephyr/releases/download/v0.3.2/Linux.tar.gz | tar -xvz -C /tmp
-      - run: sudo cp /tmp/zephyr/zephyr /usr/local/bin/
+      - name: Download Zephyr release
+        run: curl -Ls https://github.com/coot/zephyr/releases/download/v0.3.2/Linux.tar.gz | tar -xvz -C /tmp
+      - name: Copy Zephyr to PATH
+        run: sudo cp /tmp/zephyr/zephyr /usr/local/bin/
 
-      # Install yarn
-      - run: sudo npm install -g yarn
+      - name: Install yarn
+        run: sudo npm install -g yarn
 
       # Run actual tasks
       - uses: actions/checkout@v2
-      - run: yarn install
-      - run: yarn test
-      - run: yarn build-storybook
-      - run: yarn bundle
+      ## Frontend
+      - name: Install Frontend Dependencies
+        run: yarn install
+      - name: Test Frontend
+        run: yarn test
+      - name: Build Storybook
+        run: yarn build-storybook
+      - name: Bundle Frontend
+        run: yarn bundle
+
+     ## UI Server
+      - name: Install UI Server Dependencies
+        working-directory: ui-server
+        run: yarn install
+      - name: Build UI Server
+        working-directory: ui-server
+        run: yarn build
+
+    ## Build docker image
+    ## The Dockerfile requires the two previous steps
+      - name: Build Docker image
+        run: docker build . 
