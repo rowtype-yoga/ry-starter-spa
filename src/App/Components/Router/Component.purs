@@ -1,7 +1,6 @@
 module App.Components.Router.Component where
 
 import App.Prelude.View
-
 import App.Components.Container as Container
 import App.Components.Home as Home
 import Data.Foldable (for_)
@@ -19,24 +18,25 @@ routingTable route = case route of
   Home -> element Home.component {}
   Docs -> R.text "For now, please refer to the README"
   NotFound ->
-      R.div { style: css { maxWidth: "60ch" }
+    R.div
+      { style: css { maxWidth: "60ch" }
       , children:
-        [ R.h1_ [R.text "Not found"]
-        , R.a { href: "/", children: [ R.text "Take me back" ] } 
+        [ R.h1_ [ R.text "Not found" ]
+        , R.a { href: "/", children: [ R.text "Take me back" ] }
         ]
       }
 
 type Props
-  = { nav ∷ PushStateInterface }
+  = { nav ∷ PushStateInterface
+    , initialRoute ∷ Route
+    }
 
 component ∷ ReactComponent Props
 component =
-  reactComponent "Router" \({ nav } ∷ Props) -> React.do
-    route /\ setRoute <- useState' NotFound
+  reactComponent "Router" \({ nav, initialRoute } ∷ Props) -> React.do
+    route /\ setRoute <- useState' initialRoute
     cancelListenerRef <- useRef mempty
     useEffectOnce do
-      locationState <- nav.locationState
-      for_ (parse routeCodec locationState.path) setRoute
       cancelOuterListener <-
         nav.listen \location -> do
           removeListener <-
@@ -47,6 +47,14 @@ component =
           writeRef cancelListenerRef removeListener
       cancelInnerListener <- readRef cancelListenerRef
       pure (cancelInnerListener *> cancelOuterListener)
+    pure
+      $ element Container.component
+          { children: reactChildrenFromArray [ routingTable route ]
+          }
+
+static ∷ ReactComponent { route ∷ Route }
+static =
+  reactComponent "StaticRouter" \{ route } -> React.do
     pure
       $ element Container.component
           { children: reactChildrenFromArray [ routingTable route ]
