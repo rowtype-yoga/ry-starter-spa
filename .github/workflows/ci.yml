@@ -11,7 +11,7 @@ on:
     
 jobs:
   build:
-    name: Test and Bundle
+    name: Test, Bundle, and Dockerise
     runs-on: ubuntu-20.04
     steps:
 
@@ -46,5 +46,4 @@ jobs:
     ## Build docker image
     ## The Dockerfile requires the two previous steps
       - name: Build Docker image
-        working-directory: .
         run: docker build . 
