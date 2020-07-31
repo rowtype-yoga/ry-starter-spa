@@ -41,7 +41,7 @@ jobs:
         run: yarn install
       - name: Build UI Server
         working-directory: ui-server
-        run: yarn install
+        run: yarn build
 
     ## Build docker image
     ## The Dockerfile requires the two previous steps
