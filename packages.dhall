@@ -122,7 +122,15 @@ let upstream =
       https://github.com/purescript/package-sets/releases/download/psc-0.13.8/packages.dhall sha256:0e95ec11604dc8afc1b129c4d405dcc17290ce56d7d0665a0ff15617e32bbf03
 
 let overrides =
-      { spec-discovery = upstream.spec-discovery ⫽ { version = "master" } }
+      { spec-discovery = upstream.spec-discovery ⫽ { version = "master" }
+      , react-basic = upstream.react-basic ⫽ { version = "main" }
+      , react-basic-hooks =
+            upstream.react-basic-hooks
+          ⫽ { repo =
+                "https://github.com/i-am-the-slime/purescript-react-basic-hooks.git"
+            , version = "make-ffi-zephyr-ready"
+            }
+      }
 
 let additions =
       { react-testing-library =
@@ -144,6 +152,20 @@ let additions =
           , repo =
               "https://github.com/i-am-the-slime/purescript-react-testing-library.git"
           , version = "master"
+          }
+      , react-basic-dom =
+          { dependencies =
+            [ "effect"
+            , "foreign-object"
+            , "react-basic"
+            , "unsafe-coerce"
+            , "web-dom"
+            , "web-events"
+            , "web-file"
+            , "web-html"
+            ]
+          , repo = "https://github.com/lumihq/purescript-react-basic-dom.git"
+          , version = "main"
           }
       , react-basic-emotion =
           { dependencies =
