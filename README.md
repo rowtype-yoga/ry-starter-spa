@@ -8,10 +8,6 @@
 
 Any real adventurer prepares their trip. For this trip you need to equip your computer with the following supplies:
  - [NodeJS](https://nodejs.org/en/download/)
- - Yarn:
-   ```sh
-   npm install -g yarn
-   ```
 
 # 🖥 Developing
 We recommend using Storybook during development but you can also locally start the application.
@@ -22,21 +18,21 @@ A very nice workflow for building frontends is to use [Storybook](https://storyb
 To run storybook run:
 
 ```sh
-yarn storybook
+npx yarn storybook
 ```
 
 ## 🏃🏽‍♀️ Running the whole application
 To see the project in your browser run:
 
 ```sh
-yarn start
+npx yarn start
 ```
 
 # 🧪 Testing
 To run the tests issue this command
 
 ```sh
-yarn test
+npx yarn test
 ```
 
 # 🛠 Building
@@ -49,7 +45,7 @@ You need to equip your computer with [Zephyr](https://github.com/coot/zephyr/rel
 To create a bundle that is essentially an `index.html` and an `index.js` file run the following command:
 
 ```sh
-yarn bundle
+npx yarn bundle
 ```
 
 # 👟 Running
