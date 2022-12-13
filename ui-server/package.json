@@ -9,7 +9,7 @@
     "@emotion/cache": "^10.0.29",
     "@emotion/core": "^10.0.28",
     "create-emotion-server": "^10.0.27",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
